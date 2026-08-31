@@ -5,10 +5,10 @@ body{
     margin: 0;
     background-color: #f4f6f9;
     color: #131c30;
-    font-family: "inter", Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     line-height: 1.65;
 }
-.container{
+.container{ /*container presente no header,main,footer*/ /*não apagar essa informação*/
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 28px;
@@ -20,7 +20,9 @@ body{
     color: #1b3157;
     margin-bottom: 8px;
 }
-.img{
+.img{ /*classe pai de todas as img (não apagar!)*/
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #e5e9f0;
@@ -31,10 +33,9 @@ body{
     max-width: calc(33.333% - 24px);
     margin: 12px;
     text-align: center;
-    width: 300px;
 
 }
-.img:hover{
+.img:hover{ /*conf de animação dos cards das imagens*/
     transform: translateY(-5px);
     box-shadow:  0 4px 10px rgba(0, 0, 0, 0.12);;
 }
@@ -45,6 +46,11 @@ body{
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
+}
+.img figure { /*configuração do cargo da equipe, vai fazer com que o cargo que aparecer seja empurrado para baixo, nâo importando texto ou inf alguma.*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .imagens{
     display: flex;
@@ -84,22 +90,19 @@ body{
     color: white;
     text-align: center;
 }
-.objetivo{
+.objetivos{
     background-color: #1d3461;
-    text-align: center;
 }
 .justificativa {
     background-color: #254577;
-    text-align: center;
 }
 .vinculo {
     background-color: #2d528d;
-    text-align: center;
 }
-.ficha{
+
+.ficha{ /*classe da ficha do PIBIC do inicio da pagina*/
     color: #ffffff;
     background-color: #1d3461;
-    flex: 2;
     padding: 28px;
     border-radius: 18px;
     box-shadow: 0 4px 14px rgba(19,28,48,0.05);
@@ -135,13 +138,11 @@ body{
     flex: 2;
 }
 .classe{
+    margin-top: auto;
     background-color: rgba(19,28,48,0.05);
-    border-radius: 12px;
-    border: #f4f6f9;
-}
-
-.secao {
-    margin-bottom: 10px;
+    border-radius:12px;
+    border: 1px solid #f4f6f9;
+    text-align: center;
 }
 
 .navegacao {
@@ -161,82 +162,4 @@ nav a:hover {
     display: flex;
     gap: 1rem;
 }
-
-/*----TUDO SOBRE A PAGINA DA FEIRA AQUI!!---*/
-
-
-h1, h2{
-    font-family:  Georgia, serif;
-}
-body {
-    margin: 0;
-    background-color: #eef1f7;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.projeto {
-    width: 75%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px 0;
-}
-
-.titulo-pequeno {
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #1b3157;
-    margin-bottom: 8px;
-}
-.inf-pequeno{
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #1b3157;
-    margin-bottom: 8px;
-}
-
-.projeto h1 {
-    font-family: Georgia, serif;
-    font-size: 28px;
-    color: #17233a;
-    margin: 0 0 8px;
-}
-
-.descricao {
-    width: 430px;
-    color: #596274;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 28px;
-}
-
-.cardes {
-    display: flex;
-    gap: 14px;
-}
-
-.carde {
-    background-color: white;
-    width: 33.33%;
-    padding: 18px;
-    border-radius: 9px;
-    border-left: 3px solid #1b3157;
-    box-sizing: border-box;
-}
-
-.carde h2 {
-    font-family: Georgia, serif;
-    font-size: 15px;
-    color: #17233a;
-    margin-top: 0;
-}
-
-.carde p {
-    color: #626b7b;
-    font-size: 11px;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
 
